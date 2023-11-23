@@ -8,6 +8,9 @@ export default {
     extend: {
       colors: {
         'hospital-green': '#ACD9B2'
+      },
+      minHeight: {
+        'figure': '128px'
       }
     },
   },
