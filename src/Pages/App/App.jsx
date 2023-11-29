@@ -13,6 +13,8 @@ import MyAccount from '../MyAccount/MyAccount.jsx';
 
 import Navbar from '../../Components/Navbar/index.jsx';
 import Layout from "../../Components/Layout";
+import { ShoppingCart } from '../../Components/ShoppingCart/index.jsx';
+import { ShoppingCartProvider } from "../../Context/index.jsx"
 import './App.css'
 
 
@@ -31,12 +33,15 @@ const AppRoutes = () => {
 
 const App = () => {
   return (
-    <BrowserRouter>
-      <Navbar />
-      <Layout>
-        <AppRoutes />
-      </Layout>
-    </BrowserRouter>
+    <ShoppingCartProvider>
+      <BrowserRouter>
+        <Navbar />
+        <Layout>
+          <AppRoutes />
+          <ShoppingCart />
+        </Layout>
+      </BrowserRouter>
+    </ShoppingCartProvider>
   )
 }
 
